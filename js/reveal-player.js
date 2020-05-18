@@ -4,6 +4,7 @@ $(document).ready(function() {
         $('#first-section').css("padding", "85px 0 10px 0"); 
         $('#video-player').show();
 
+        if (this.hash!=null){
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
         if (target.length) {
@@ -11,6 +12,7 @@ $(document).ready(function() {
               scrollTop: target.offset().top
           }, "slow");
           return false;
-        };        
+        };   
+    }    
     });
 });
