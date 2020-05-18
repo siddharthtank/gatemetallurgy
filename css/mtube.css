@@ -459,8 +459,8 @@ footer .container img {
 .first-section .container .video-player .playlist-section .playlist .video-card .something {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30px 107.17px auto;
-      grid-template-columns: 30px 107.17px auto;
+  -ms-grid-columns: 30px 106.7px auto;
+      grid-template-columns: 30px 106.7px auto;
   height: 60px;
   margin: 5px 0;
 }
