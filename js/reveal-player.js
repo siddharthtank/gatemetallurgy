@@ -17,6 +17,19 @@ $(document).ready(function() {
     });
 });
 
+
+
+
+function myFunction(x) {
+    if (x.matches) { 
+        revealPlayer();
+    }
+}
+
+var x = window.matchMedia("(max-width: 992px)")
+    myFunction(x)
+    x.addListener(myFunction)
+
 function revealPlayer() {
     var iframe = document.createElement('iframe');
     iframe.src = "https://www.youtube.com/embed/9Sf278j1GTU";
