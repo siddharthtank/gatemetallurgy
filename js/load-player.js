@@ -1,1 +1,10 @@
-function myFunction(e){e.matches&&revealPlayer()}var x=window.matchMedia("(max-width: 992px)");function revealPlayer(){var e=document.createElement("iframe");e.src="https://www.youtube.com/embed/9Sf278j1GTU",e.id="embed",e.name="link",e.frameBorder="0",e.allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",e.allowFullscreen=!0,document.querySelector(".video-section .video").appendChild(e)}myFunction(x),x.addListener(myFunction);
+function myFunction(x) {
+    if (x.matches) { 
+        revealPlayer();
+    }
+}
+
+var x = window.matchMedia("(max-width: 992px)")
+    myFunction(x)
+    x.addListener(myFunction)
+

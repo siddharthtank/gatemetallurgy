@@ -463,7 +463,28 @@
 <!-- ------------------------------- Footer -------------------------------- -->
 
 <!-- ------------------------------- Scripts ------------------------------- -->
-<script src="../../../js/load-player.js"></script>
+<script>
+  function myFunction(x) {
+    if (x.matches) { 
+        revealPlayer();
+    }
+  }
+
+var x = window.matchMedia("(max-width: 992px)")
+    myFunction(x)
+    x.addListener(myFunction)
+  
+function revealPlayer() {
+    var iframe = document.createElement('iframe');
+    iframe.src = "https://www.youtube.com/embed/I9fQ9KDk_uU";
+    iframe.id = "embed";
+    iframe.name = "link";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    document.querySelector('.video-section .video').appendChild(iframe);
+    }
+</script>
 
 <script src="../../../js/lazy-load.js"></script>
 
@@ -474,6 +495,8 @@
 <script src="../../../js/jquery.min.js"></script>
 
 <script src="../../../js/reveal-player.js"></script>
+
+<script src="../../../js/browser-alert.js"></script>
 <!-- ------------------------------- Scripts ------------------------------- -->
 
 </body>
