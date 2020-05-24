@@ -16,7 +16,7 @@
 <!-- ------------------------------- Header -------------------------------- -->
 <header>
     <div class="container">
-        <a href="#"><img src="../../../icons/logo-light.svg" alt="" class="logo" id="header-logo"></a>
+        <a href="#"><img data-src="icons/logo-light.svg" alt="" class="logo" id="header-logo"></a>
         <div class="navbar">
             <nav>
                 <ul>
@@ -33,6 +33,23 @@
                      <span class="slider round"></span>
                 </label>
             </div>
+            <div class="nav">
+              <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+              <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+              </label>
+
+              <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                    <a href="https://gatemetallurgy.tk"><li>Home</li></a>
+                    <a href="#"><li>GATE Info</li></a>
+                    <a href="#"><li>Video Course</li></a>
+                    <a href="#"><li>Contact Us</li></a>
+                </ul>
+              </div>
+          </div>
         </div>
     </div>
 </header>
@@ -412,7 +429,7 @@
     <footer>
         <div class="container">
             <P>&copy; 2020 GATE Metallurgy. All rights reserved.</P>
-            <a href="#"><img data-src="../../../icons/logo-light.svg" alt="" id="footer-logo"></a>
+            <a href="#"><img src="../../../icons/logo-light.svg" alt="" id="footer-logo"></a>
         </div>
     </footer>
 <!-- ------------------------------- Footer -------------------------------- -->
