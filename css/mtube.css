@@ -109,6 +109,8 @@ header .container .navbar {
   display: -ms-flexbox;
   display: flex;
   place-items: center;
+  /* ------------------------------ NavBar Button ----------------------------- */
+  /* ------------------------------ NavBar Button ----------------------------- */
 }
 
 header .container .navbar nav {
@@ -137,6 +139,10 @@ header .container .navbar nav li a:hover {
 header .container .navbar nav li:hover {
   color: var(--orange);
   cursor: pointer;
+}
+
+header .container .navbar .nav {
+  display: none;
 }
 
 header .container .navbar .mode {
@@ -210,14 +216,6 @@ header .container .navbar .mode .slider.round {
 
 header .container .navbar .mode .slider.round:before {
   border-radius: 22px;
-}
-
-html.transition,
-html.transition *,
-html.transition *::before,
-html.transition *::after {
-  -webkit-transition: all 150ms !important;
-  transition: all 150ms !important;
 }
 
 /* --------------------------------- Header --------------------------------- */
@@ -797,9 +795,9 @@ footer .container img {
 }
 
 .third-section .container .cards .cards_item .card .card_content h3 {
-  font-size: 16px;
-  line-height: 20px;
-  height: 45px;
+  font-size: 17px;
+  line-height: 19px;
+  height: 60px;
   font-weight: 600;
   overflow: hidden;
   margin-top: 2px;
@@ -854,17 +852,144 @@ footer .container img {
 
 @media (max-width: 992px) {
   header {
-    height: 45px;
+    height: 55px;
   }
   header .container {
     padding-left: 15px;
     padding-right: 15px;
   }
   header .container img {
-    max-height: 30px;
+    max-height: 35px;
   }
   header .container .navbar nav {
     display: none;
+  }
+  header .container .navbar .mode {
+    margin-right: 40px;
+  }
+  header .container .navbar .nav {
+    display: block;
+  }
+  header .container .navbar .nav .sidebarIconToggle {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 21px;
+    right: 15px;
+    height: 25px;
+    width: 22px;
+  }
+  header .container .navbar .nav .sidebarIconToggle .spinner {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--black);
+  }
+  header .container .navbar .nav .sidebarIconToggle .horizontal {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+  }
+  header .container .navbar .nav .sidebarIconToggle .diagonal.part-1 {
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    float: left;
+  }
+  header .container .navbar .nav .sidebarIconToggle .diagonal.part-2 {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+  }
+  header .container .navbar .nav #sidebarMenu {
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    margin-top: 26px;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    background: var(--white);
+  }
+  header .container .navbar .nav #sidebarMenu .sidebarMenuInner {
+    margin: 0;
+    padding: 30px 0 0 0;
+  }
+  header .container .navbar .nav #sidebarMenu .sidebarMenuInner a li {
+    list-style: none;
+    color: var(--blue);
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 3px solid var(--light-grey);
+    margin: 0 auto;
+  }
+  header .container .navbar .nav #sidebarMenu .sidebarMenuInner a li:hover {
+    background-color: var(--light-grey);
+    color: var(--orange);
+  }
+  header .container .navbar .nav input[type="checkbox"]:checked ~ #sidebarMenu {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  header .container .navbar .nav input[type="checkbox"] {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: none;
+  }
+  header .container .navbar .nav input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    opacity: 0;
+  }
+  header .container .navbar .nav input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    margin-top: 8px;
+  }
+  header .container .navbar .nav input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+    margin-top: -9px;
   }
   .footer .container {
     -ms-grid-columns: 1fr;
@@ -901,7 +1026,7 @@ footer .container img {
   .banner {
     height: 330px;
     padding: 20px 0 30px 0;
-    top: 45px;
+    top: 55px;
   }
   .banner .container {
     padding: 0 15px;
@@ -1056,10 +1181,6 @@ footer .container img {
   .container {
     max-width: 980px;
   }
-  .third-section .container .cards {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -1137,3 +1258,4 @@ footer .container img {
 }
 
 /* ------------------------------ Media Queries ----------------------------- */
+/*# sourceMappingURL=mtube.css.map */
