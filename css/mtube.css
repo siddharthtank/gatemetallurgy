@@ -925,7 +925,7 @@ footer .container img {
     height: 100vh;
     position: fixed;
     right: 0;
-    width: 100vw;
+    width: 80vw;
     margin-top: 26px;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw);
