@@ -8,6 +8,7 @@ html {
   --black: #212121;
   --grey: #4e4e4e;
   --overlay: rgba(255, 255, 255, 0.90);
+  --blur: rgba(255, 255, 255, 0.6);
   --radius: 10px;
   --border: 1px solid #CACACA;
   --shadow: 0 0 20px rgba(0, 0, 0, 0.12);
@@ -25,6 +26,7 @@ html[data-theme='dark'] {
   --blue: #009dff;
   --black: #f0f0f0;
   --grey: #dddddd;
+  --blur: rgba(0, 0, 0, 0.4);
   --overlay: rgba(10, 13, 12, 0.90);
   --border: 1px solid #333333;
   --shadow: none;
@@ -925,7 +927,7 @@ footer .container img {
     height: 100vh;
     position: fixed;
     right: 0;
-    width: 80vw;
+    width: 70vw;
     margin-top: 26px;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw);
@@ -933,7 +935,9 @@ footer .container img {
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-    background: var(--white);
+    -webkit-backdrop-filter: blur(30px);
+            backdrop-filter: blur(30px);
+    background-color: var(--blur);
   }
   header .container .navbar .nav #sidebarMenu .sidebarMenuInner {
     margin: 0;
@@ -942,13 +946,12 @@ footer .container img {
   header .container .navbar .nav #sidebarMenu .sidebarMenuInner a li {
     list-style: none;
     color: var(--blue);
-    font-size: 18px;
-    line-height: 35px;
+    font-size: 16px;
+    line-height: 25px;
     font-weight: 700;
     padding: 10px 30px;
     cursor: pointer;
     text-align: center;
-    border-bottom: 3px solid var(--light-grey);
     margin: 0 auto;
   }
   header .container .navbar .nav #sidebarMenu .sidebarMenuInner a li:hover {
