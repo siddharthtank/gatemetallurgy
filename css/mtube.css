@@ -950,6 +950,7 @@ footer .container img {
     line-height: 25px;
     font-weight: 700;
     padding: 10px 30px;
+    text-transform: uppercase;
     cursor: pointer;
     text-align: center;
     margin: 0 auto;
