@@ -882,7 +882,7 @@ footer .container img {
     z-index: 99;
     height: 100%;
     width: 100%;
-    top: 21px;
+    top: 20px;
     right: 15px;
     height: 25px;
     width: 22px;
@@ -927,8 +927,8 @@ footer .container img {
     height: 100vh;
     position: fixed;
     right: 0;
-    width: 70vw;
-    margin-top: 26px;
+    width: 100vw;
+    margin-top: 27px;
     -webkit-transform: translateX(100vw);
             transform: translateX(100vw);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -937,7 +937,7 @@ footer .container img {
     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
     -webkit-backdrop-filter: blur(30px);
             backdrop-filter: blur(30px);
-    background-color: var(--blur);
+    background-color: var(--white);
   }
   header .container .navbar .nav #sidebarMenu .sidebarMenuInner {
     margin: 0;
@@ -953,6 +953,7 @@ footer .container img {
     cursor: pointer;
     text-align: center;
     margin: 0 auto;
+    border-bottom: 2px solid var(--light-grey);
   }
   header .container .navbar .nav #sidebarMenu .sidebarMenuInner a li:hover {
     background-color: var(--light-grey);
@@ -1038,13 +1039,12 @@ footer .container img {
     margin-top: 0;
   }
   .banner .container .course-info .path {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .banner .container .course-info .path a {
     font-size: 13px;
   }
   .banner .container .course-info .title {
-    margin-top: 30px;
     display: -ms-grid;
     display: grid;
   }
@@ -1055,7 +1055,7 @@ footer .container img {
   .banner .container .course-info .title .infographics p {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .banner .container .course-info .title .infographics span {
     font-size: 14px;
