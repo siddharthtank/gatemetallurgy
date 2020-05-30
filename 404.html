@@ -46,9 +46,13 @@ body {
   height: 25vh;
   background: #0C0E10;
 }
+.inner-content{
+  margin-top: 20px;
+}
 
 .logo{
     display: block;
+    min-height: 35px;
     max-height: 35px;
     margin: 0 auto;
 }
@@ -68,6 +72,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
 @media (max-width: 770px) {
   .container {
     flex-direction: column;
@@ -90,10 +95,11 @@ body {
     top: 0;
   }
 }
+
 @media (max-width: 770px) {
   .left-section .inner-content {
     position: relative;
-    padding: 1rem 0;
+    padding: 0;
   }
 }
 
@@ -118,7 +124,7 @@ body {
   max-width: 480px;
   font-size: 1.5em;
   line-height: 1.15em;
-  padding: 0 1rem;
+  padding: 0;
   margin: 0 auto;
 }
 @media (max-width: 770px) {
@@ -197,13 +203,10 @@ body {
 <div class="container">
 	<div class="left-section">
 		<div class="inner-content">
-            <a href="../index.html"><img class="logo" src="https://gatemetallurgy.tk/icons/logo-dark.svg"></a>
+      <a href="../index.html"><img class="logo" src="https://gatemetallurgy.tk/icons/logo-dark.svg"></a>
 			<h1 class="heading">404</h1>
 			<p class="subheading">
-                PAGE NOT FOUND
-                <br>
-                <br>
-                Looks like the page you were looking for is no longer here.</p>
+        Looks like the page you were looking for is no longer here.</p>
 		</div>
 	</div>
 	<div class="right-section">
